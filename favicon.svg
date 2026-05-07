@@ -1,0 +1,74 @@
+<svg width="192" height="192" viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter id="glow">
+<feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+<feMerge>
+<feMergeNode in="coloredBlur"/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge>
+</filter>
+
+<pattern id="gridPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00d9ff" stroke-width="0.3" opacity="0.35"/>
+</pattern>
+</defs>
+
+<style>
+.icon-bg { fill: #0a0e1a; }
+.icon-node { fill: #00d9ff; }
+.icon-edge { stroke: #00d9ff; }
+.icon-pulse { stroke: #ffaa00; }
+.icon-perimeter { stroke: #ffffff; }
+.edge-line { fill: none; stroke-width: 2; opacity: 0.5; }
+.pulse-line { fill: none; stroke-width: 3; opacity: 0.8; }
+</style>
+
+<!-- Background -->
+<rect class="icon-bg" width="680" height="680" rx="120"/>
+
+<!-- Grid texture -->
+<rect width="680" height="680" rx="120" fill="url(#gridPattern)"/>
+
+<!-- Network mesh - scaled and centered for tighter fit -->
+<g transform="translate(340, 340) scale(1.4) translate(-340, -340)">
+
+<!-- Hexagonal perimeter - WHITE -->
+<polygon class="icon-perimeter" points="340,140 500,230 500,430 340,520 180,430 180,230" 
+         fill="none" stroke-width="2.5" opacity="0.6"/>
+
+<g class="icon-edge edge-line">
+<line x1="340" y1="330" x2="340" y2="180"/>
+<line x1="340" y1="330" x2="470" y2="250"/>
+<line x1="340" y1="330" x2="470" y2="410"/>
+<line x1="340" y1="330" x2="340" y2="480"/>
+<line x1="340" y1="330" x2="210" y2="410"/>
+<line x1="340" y1="330" x2="210" y2="250"/>
+
+<line x1="340" y1="180" x2="470" y2="250"/>
+<line x1="470" y1="250" x2="470" y2="410"/>
+<line x1="470" y1="410" x2="340" y2="480"/>
+<line x1="340" y1="480" x2="210" y2="410"/>
+<line x1="210" y1="410" x2="210" y2="250"/>
+<line x1="210" y1="250" x2="340" y2="180"/>
+</g>
+
+<g class="icon-pulse pulse-line">
+<line x1="340" y1="330" x2="470" y2="250"/>
+<line x1="340" y1="330" x2="210" y2="410"/>
+</g>
+
+<g class="icon-node" filter="url(#glow)">
+<circle cx="340" cy="180" r="14"/>
+<circle cx="470" cy="250" r="14"/>
+<circle cx="470" cy="410" r="14"/>
+<circle cx="340" cy="480" r="14"/>
+<circle cx="210" cy="410" r="14"/>
+<circle cx="210" cy="250" r="14"/>
+</g>
+
+<circle class="icon-node" cx="340" cy="330" r="24" opacity="0.3" filter="url(#glow)"/>
+<circle class="icon-node" cx="340" cy="330" r="18"/>
+
+</g>
+
+</svg>
