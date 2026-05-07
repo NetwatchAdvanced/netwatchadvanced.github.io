@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services — NetWatch</title>
+  <title>Services | NetWatch</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/netwatch.css" />
@@ -782,8 +782,8 @@
           <p>
             Suricata intrusion detection system deployed on a dedicated Raspberry Pi,
             configured for your network, with both signature-based and heuristic detection.
-            Passively monitors all traffic via SPAN port — no inline impact, no performance
-            degradation, no single point of failure.
+            Passively monitors all traffic via SPAN port; meaning no inline impact, no performance
+            degradation, and no single point of failure.
           </p>
           <p class="service-note">Requires managed switch for SPAN port mirroring</p>
         </div>
@@ -820,7 +820,7 @@
           <p>
             All external connections mapped by country, city, and threat classification.
             Connection volume, first and last seen timestamps, protocol breakdown, and
-            per-IP investigation — all resolved locally with no external API dependency.
+            per-IP investigation which are all resolved locally with no external API dependency.
           </p>
           <p class="service-note">Included with NetWatch deployment</p>
         </div>
@@ -832,15 +832,14 @@
           Detection, not prevention
         </p>
         <p>
-          NetWatch is an IDS — an intrusion <strong>detection</strong> system. It sees everything
+          NetWatch is an IDS, an intrusion <strong>detection</strong> system. It sees everything
           on your network and alerts when something looks wrong. It does not block traffic,
-          intercept connections, or stop attacks in progress. That's an honest limitation
-          and one worth understanding before deployment.
+          intercept connections, or stop attacks in progress. 
         </p>
         <p>
-          What it gives you is <strong>visibility you currently don't have</strong> — a continuous
+          What it gives you is <strong>visibility you currently don't have</strong> via a continuous
           record of network activity, anomaly detection, and alerting when something
-          needs attention. What happens after an alert is a conversation.
+          needs attention. What happens after an alert is security recommendations, to resolve incidents and mitigate future occurrences.
         </p>
       </div>
     </div>
@@ -853,54 +852,39 @@
     <p class="section-label">Install Configurations</p>
     <h2>Hardware setups for <em>Tier 4 deployment.</em></h2>
     <p class="section-intro">
-      Three hardware configurations for NetWatch deployment. All are one-time installs —
+      Three hardware configurations for NetWatch deployment. All are one-time installs and
       you own the hardware permanently. The right configuration depends on your network
       size, existing equipment, and how much visibility you want.
     </p>
 
     <div class="install-grid">
       <div class="install-card">
-        <p class="install-card-label">Basic</p>
-        <h3>Single Device</h3>
+        <p class="install-card-label">Standard</p>
+        <h3>Visibility</h3>
         <ul class="install-includes">
           <li>Single Raspberry Pi running Suricata IDS, NetWatch dashboard, and Pi-hole + Unbound</li>
-          <li>Flat network monitoring — no SPAN port required</li>
-          <li>Suitable for smaller networks with modest traffic volume</li>
-          <li>Most affordable entry point to full NetWatch deployment</li>
+          <li>Suitable for networks seeking visibility, that already have a 'prosumer' grade router deployed</li>
+          <li>Managed switch with SPAN port: enables full passive traffic capture</li>
+          <li>Most affordable entry point to full NetWatch deployment, <i>with some control limitations.</i></li>
         </ul>
         <p class="install-hardware-note">
-          <strong>Hardware:</strong> 1× Raspberry Pi 5 + storage<br />
-          One-time purchase. You own it.
-        </p>
-      </div>
-
-      <div class="install-card featured">
-        <p class="install-card-label">Standard</p>
-        <h3>Dedicated Devices</h3>
-        <ul class="install-includes">
-          <li>Dedicated Pi for Suricata IDS with SPAN port mirroring for complete LAN visibility</li>
-          <li>Dedicated Pi for Pi-hole + Unbound DNS stack</li>
-          <li>Managed switch with SPAN port — full passive traffic capture</li>
-          <li>No resource contention between IDS and DNS workloads</li>
-        </ul>
-        <p class="install-hardware-note">
-          <strong>Hardware:</strong> 2× Raspberry Pi 5 + managed switch + storage<br />
-          One-time purchase. You own everything.
+          <strong>Hardware:</strong> Raspberry Pi 5 + managed switch + external storage<br />
+          One-time hardware purchase and you own everything, forever.
         </p>
       </div>
 
       <div class="install-card">
         <p class="install-card-label">Full</p>
-        <h3>Complete Stack</h3>
+        <h3>Visibility & Granular Control</h3>
         <ul class="install-includes">
           <li>Everything in Standard, plus router upgrade to hardware supporting VLANs, ACLs, and forced DNS routing</li>
           <li>IoT device segmentation via VLAN</li>
-          <li>DoH blocking at the router level — no device can bypass DNS filtering</li>
+          <li>DoH blocking at the router level, meaning no device can bypass DNS filtering</li>
           <li>Firewall rules configured for your specific environment</li>
         </ul>
         <p class="install-hardware-note">
-          <strong>Hardware:</strong> Standard config + capable router (e.g. TP-Link ER605)<br />
-          One-time purchase. You own everything.
+          <strong>Hardware:</strong> Standard config + capable router (e.g. TP-Link ER605, 707, etc)<br />
+          One-time hardware purchase and you own everything, forever.
         </p>
       </div>
     </div>
@@ -913,9 +897,9 @@
     <p class="section-label">Ongoing Monitoring</p>
     <h2>Monthly subscription, <em>after deployment.</em></h2>
     <p class="section-intro">
-      NetWatch is a proprietary application — not open source software. The monthly
+      NetWatch is a proprietary application, it is <b>not open source software.</b> The monthly
       subscription covers app access, updates, and ongoing support. Pricing is
-      discussed directly and set per engagement. Tiers 1–3 have no ongoing fees.
+      discussed directly and set per engagement. Tiers 1–2 have no ongoing fees.
     </p>
 
     <!-- SINGLE LIVE SUBSCRIPTION TIER -->
@@ -924,10 +908,11 @@
         <p class="sub-card-label">NetWatch Standard</p>
         <h3>Monthly Subscription</h3>
         <p class="sub-card-desc">
-          NetWatch runs on your hardware, on your network. The monthly subscription
+          NetWatch runs on <b>your</b>hardware, on <b>your</b> network, with no third party data collection nor 
+          cloud services utilized. The monthly subscription
           covers continued app access, software updates, maintenance, and a monthly
           report covering alert activity, traffic patterns, and any recommended
-          follow-up. Support is included for the duration of the subscription.
+          follow-up. This level of support is included for the duration of the subscription.
         </p>
         <ul class="sub-includes">
           <li>Full NetWatch dashboard access</li>
@@ -980,17 +965,18 @@
 
     <div class="ownership-note" style="margin-top: 1.5rem;">
       <p>
-        <strong>What happens if you cancel.</strong> Your hardware is yours permanently —
-        the Pi, the switch, all of it stays. Suricata continues running and logging to
-        your device. The NetWatch application may continue operating on your hardware,
-        but all support ends immediately on cancellation — no updates, no configuration
-        changes, no troubleshooting. Any issues with the application after that point
+        <strong>What happens if you cancel.</strong> Your hardware is yours permanently:
+        the Pi, the switch, all of it stays. Suricata is an open-source software, so it will
+        continues running and logging to
+        your device. The NetWatch application itself may, <i>or may NOT</i> continue operating on your hardware,
+        but all support definitively ends immediately on cancellation with no updates, no configuration
+        changes, and no troubleshooting moving forward. Any issues with the application after that point
         are outside the scope of the service.
       </p>
       <p>
-        Tiers 1–3 are one-time engagements. There are no ongoing fees for DNS,
+        Tiers 1–3 are one-time engagements. There are no ongoing fees for auditing,
         firewall configuration, mesh deployment, or any other service outside of
-        the NetWatch application itself.
+        DNS protection deployment and the NetWatch application itself.
       </p>
     </div>
   </section>
@@ -1029,7 +1015,7 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="privacy.html">Privacy</a></li>
       </ul>
-      <span class="footer-copy">&copy; 2026 NetWatch — All rights reserved</span>
+      <span class="footer-copy">&copy; 2026 NetWatch | All rights reserved</span>
     </div>
   </footer>
 
