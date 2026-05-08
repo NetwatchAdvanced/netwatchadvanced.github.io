@@ -580,7 +580,7 @@
       <p class="hardware-callout-label">Before we begin</p>
       <p>
         Not all hardware supports all features. A standard ISP-provided router cannot do
-        VLAN segmentation, forced DNS routing, or granular firewall rules — those require
+        VLAN segmentation, forced DNS routing, or granular firewall rules as those require
         a capable router and, in some cases, a managed switch. <strong>This is not a problem,
         it's information.</strong> The Tier 1 audit exists to establish exactly what your
         current hardware supports, what it can't do, and what a hardware upgrade would
@@ -588,9 +588,9 @@
       </p>
       <p>
         No service is recommended before that baseline is established. And no hardware
-        purchase is ever required — it's always your call whether the upgrade is worth it.
+        purchase is ever required, it's always your call whether the upgrade is worth it.
         We document what's possible at every level so you can make that decision with
-        complete information.
+        complete information and make your decisions based on your goals and the hardware required to achieve them.
       </p>
     </div>
   </section>
@@ -609,7 +609,7 @@
             <h3>Connectivity & Coverage Audit</h3>
           </div>
           <p>
-            A systematic assessment of your current network — throughput vs. your plan speed,
+            A systematic assessment of your current network: throughput vs. your plan speed,
             Wi-Fi coverage and dead zones, channel interference, ISP equipment performance,
             and router placement. Findings are documented in writing.
           </p>
@@ -622,7 +622,7 @@
           </div>
           <p>
             Part of every Tier 1 audit. We determine what your existing hardware is actually
-            capable of — which security features it supports, which it doesn't, and what
+            capable of: which security features it supports, which it doesn't, and what
             a targeted upgrade would unlock. No assumptions, no surprises later.
           </p>
           <p class="service-note">Required before any Tier 2–4 work begins</p>
@@ -643,7 +643,7 @@
             <h3>Mesh System Integration</h3>
           </div>
           <p>
-            Design and deployment of a mesh Wi-Fi system appropriate to your space —
+            Design and deployment of a mesh Wi-Fi system appropriate to your space:
             node placement, backhaul configuration, and integration with your existing
             router or gateway. Dead zones eliminated, coverage mapped.
           </p>
@@ -655,7 +655,7 @@
             <h3>Firewall Configuration</h3>
           </div>
           <p>
-            Firewall rule sets configured for your environment — inbound and outbound
+            Firewall rule sets configured for your environment: inbound and outbound
             traffic controls, default-deny posture, port management, and logging.
             Configured to what your hardware actually supports.
           </p>
@@ -667,7 +667,7 @@
             <h3>VLAN Network Segmentation</h3>
           </div>
           <p>
-            Logical separation of your network into isolated segments — trusted devices,
+            Logical separation of your network into isolated segments: trusted devices,
             IoT devices, guest access. Prevents lateral movement if a device is compromised.
             Requires a VLAN-capable router and managed switch.
           </p>
@@ -679,9 +679,9 @@
             <h3>VPN Implementation</h3>
           </div>
           <p>
-            Secure remote access configuration — either client-to-site VPN for accessing
+            Secure remote access configuration: either client-to-site VPN for accessing
             your home network remotely, or site-to-site for connecting multiple locations.
-            Deployed and tested to confirmed working.
+            Deployed and tested to confirm working.
           </p>
           <p class="service-note">Remote access configuration included</p>
         </div>
@@ -692,10 +692,11 @@
           </div>
           <p>
             Specific, justified hardware recommendations based on your audit findings and
-            goals — not a generic list. We standardize on known, tested equipment so the
+            goals, for your specific network architecture, never a generic list. 
+            We standardize on known, tested equipment so the
             support surface stays manageable and outcomes are predictable.
           </p>
-          <p class="service-note">Written recommendation provided regardless of whether you proceed</p>
+          <p class="service-note">Written recommendation provided regardless of whether you proceed with NetWatch or not</p>
         </div>
         <div class="service-card">
           <div class="service-card-header">
@@ -703,7 +704,7 @@
             <h3>Security Architecture Advising</h3>
           </div>
           <p>
-            A broader look at your security posture — what's well-configured, what's
+            A broader look at your security posture: what's well-configured, what's
             exposed, and what the realistic threat vectors are for your environment.
             Plain language, no alarmism, actionable output.
           </p>
@@ -716,7 +717,7 @@
     <div class="service-group" id="tier-3">
       <p class="service-group-label">
         <span class="t3">Tier 3</span>
-        DNS Layer — no router upgrade required
+        DNS Layer - no router upgrade required
       </p>
       <div class="services-grid">
         <div class="service-card">
@@ -732,7 +733,7 @@
             enforcement requires a router capable of NAT port redirection, which is
             assessed and addressed in Tier 1 and Tier 2.
           </p>
-          <p class="service-note">Works with your existing router — bypass enforcement depends on router capability</p>
+          <p class="service-note">Works with your existing router, but bypass enforcement depends on router capability</p>
         </div>
         <div class="service-card">
           <div class="service-card-header">
@@ -742,7 +743,7 @@
           <p>
             90-day query history, per-device analytics, blocked domain tracking, and
             health scoring across all devices on your network. Surfaces anomalous DNS
-            behavior — devices querying unusual domains, NXDOMAIN spikes, bypass attempts.
+            behavior: devices querying unusual domains, NXDOMAIN spikes, bypass attempts.
           </p>
           <p class="service-note">Included with DNS deployment</p>
         </div>
@@ -750,21 +751,24 @@
 
       <div class="ownership-note" style="margin-top: 1.25rem; margin-bottom: 0;">
         <p>
-          <strong>Open source, no subscription.</strong> Pi-hole and Unbound are open source
-          software. You're paying for the hardware, the configuration, and the deployment —
-          not a license. The Pi is yours permanently.
+          <strong>Open source, no licensing fees.</strong> Pi-hole and Unbound are open source
+          software. You're paying for the hardware, the configuration, and the deployment,
+          not a license. The Pi with software is yours permanently.
         </p>
         <p>
-          <strong>90-day support included.</strong> Every DNS deployment includes 90 days
-          of support coverage — configuration issues, troubleshooting, and break/fix are
+          <strong>30-day support included.</strong> Every DNS deployment includes 30 days
+          of support coverage: configuration issues, troubleshooting, and break/fix are
           handled at no additional cost during that window. This covers the most likely
-          failure period and ensures any issues stemming from the deployment itself are
-          resolved without question.
+          incident period and ensures any issues stemming from the deployment itself are
+          resolved without question or cost to you.
         </p>
         <p>
-          After 90 days, support continues on a per-engagement basis. Options at that
-          point are discussed directly — there's no obligation to continue and no
-          automatic charges.
+          After 30 days, support continues on a per-engagement basis. Options at that
+          point are discussed directly but there's no obligation to continue and no
+          automatic charges. There is an option for a monthly retainer to have dedicated 
+          IT helpdesk for your network to provide you peace of mind, or a 'banked' approach with a set lump
+          payment made at one time to be used during any networking isues in the future, at a set rate
+          per hour. We strive to offer flexibility to find what works best for you. 
         </p>
       </div>
     </div>
@@ -773,7 +777,7 @@
     <div class="service-group" id="tier-4" style="margin-bottom: 0;">
       <p class="service-group-label">
         <span class="t4">Tier 4</span>
-        NetWatch IDS — full deployment
+        NetWatch IDS - full deployment
       </p>
       <div class="services-grid">
         <div class="service-card">
@@ -854,9 +858,9 @@
     <p class="section-label">Install Configurations</p>
     <h2>Hardware setups for <em>Tier 4 deployment.</em></h2>
     <p class="section-intro">
-      Three hardware configurations for NetWatch deployment. All are one-time installs and
+      Two hardware configurations for NetWatch deployment. Both are one-time installs and
       you own the hardware permanently. The right configuration depends on your network
-      size, existing equipment, and how much visibility you want.
+      size, existing equipment, and exactly how much visibility and control that you want.
     </p>
 
     <div class="install-grid">
@@ -910,7 +914,7 @@
         <p class="sub-card-label">NetWatch Standard</p>
         <h3>Monthly Subscription</h3>
         <p class="sub-card-desc">
-          NetWatch runs on <b>your</b>hardware, on <b>your</b> network, with no third party data collection nor 
+          NetWatch runs on <b>your</b> hardware, on <b>your</b> network, with no third party data collection nor 
           cloud services utilized. The monthly subscription
           covers continued app access, software updates, maintenance, and a monthly
           report covering alert activity, traffic patterns, and any recommended
@@ -976,8 +980,8 @@
         are outside the scope of the service.
       </p>
       <p>
-        Tiers 1–3 are one-time engagements. There are no ongoing fees for auditing,
-        firewall configuration, mesh deployment, or any other service outside of
+        Tiers 1–2 are one-time engagements. There are no ongoing fees for auditing,
+        firewall configuration, mesh deployment, or any other service other than
         DNS protection deployment and the NetWatch application itself.
       </p>
     </div>
