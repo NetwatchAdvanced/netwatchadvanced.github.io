@@ -5,7 +5,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; worker-src 'self' blob:;">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | NetWatch</title>
+  <title>Services | NetWatch Advanced</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/netwatch.css" />
@@ -153,7 +153,7 @@
     <div class="hardware-callout">
       <p class="hardware-callout-label">Before we begin</p>
       <p>
-        Not all hardware supports all features. A standard ISP-provided modem/router cannot do
+        Not all hardware supports all features. A standard ISP-provided router cannot do
         VLAN segmentation, forced DNS routing, or granular firewall rules and those require
         a more capable router and, in some cases, a managed switch. <strong>This is not a problem,
         but rather useful information.</strong> The Tier 1 audit exists to establish exactly what your
@@ -204,11 +204,11 @@
         <div class="service-card">
           <div class="service-card-header"><div class="service-icon">◈</div><h3>VLAN Network Segmentation</h3></div>
           <p>Logical separation of your network into isolated segments: trusted devices, IoT devices, guest access. Prevents lateral movement if a device is compromised. Requires a VLAN-capable router and managed switch.</p>
-          <p class="service-note">Requires hardware capable of 802.1Q — confirmed in Tier 1</p>
+          <p class="service-note">Requires hardware capable of 802.1Q, confirmed in Tier 1</p>
         </div>
         <div class="service-card">
           <div class="service-card-header"><div class="service-icon">◈</div><h3>VPN Implementation</h3></div>
-          <p>Secure remote access configuration: either client-to-site VPN for accessing your home network remotely, or site-to-site for connecting multiple locations. Deployed and tested to confirm working.</p>
+          <p>Secure remote access configuration: either client-to-site VPN for accessing your network remotely, or site-to-site for connecting multiple locations. Deployed and tested to confirm working.</p>
           <p class="service-note">Remote access configuration included</p>
         </div>
         <div class="service-card">
@@ -230,7 +230,7 @@
       <div class="services-grid">
         <div class="service-card">
           <div class="service-card-header"><div class="service-icon">⬡</div><h3>Recursive DNS Deployment</h3></div>
-          <p>Pi-hole with Unbound deployed on a Raspberry Pi you own. Network-wide ad and tracker blocking for all devices using DHCP-assigned DNS, fully recursive resolution with no third-party resolver dependency, and DNSSEC validation. Devices with hardcoded DNS settings can attempt to bypass Pi-hole — full enforcement requires a router capable of NAT port redirection, which is assessed and addressed in Tier 1 and Tier 2.</p>
+          <p>Pi-hole with Unbound deployed on a Raspberry Pi you own. Network-wide ad and tracker blocking for all devices using DHCP-assigned DNS, fully recursive resolution with no third-party resolver dependency, and DNSSEC validation. Devices with hardcoded DNS settings can attempt to bypass Pi-hole; full enforcement requires a router capable of NAT port redirection, which is assessed and addressed in Tier 1 and Tier 2.</p>
           <p class="service-note">Works with your existing router, but bypass enforcement depends on router capability</p>
         </div>
         <div class="service-card">
